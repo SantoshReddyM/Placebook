@@ -1,0 +1,22 @@
+<h1> Welcome To Placebook </h1>
+
+<h2> SignUp </h2>
+<%= form_for(@user) do |u|%>
+
+<%= u.label :first_name %>
+<%= u.text_field :first_name %> <br><br>
+
+<%= u.label :last_name %>
+<%= u.text_field :last_name %> <br><br>
+
+<%= u.label :email %>
+<%= u.email_field :email %> <br><br>
+
+<%= u.label :password %>
+<%= u.password_field :password %> <br><br>
+
+<%= u.submit %>
+<% end %>
+
+<p> Already have an account? <%= link_to "Login", '/login' %> </p>
+

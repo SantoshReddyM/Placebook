@@ -1,0 +1,23 @@
+
+<div class = "header"> 
+  <h1 id = "heading"> Placebook </h1>
+
+
+	<%= form_for(:session, url: login_path) do |f| %>
+
+	<div class = "login" >
+		<%= f.email_field :email, :placeholder => "Email" %> 
+		 <%= f.password_field :password, :placeholder => "Password" %>
+		 <%= f.submit  "Login"%>
+		 <p> Don't have an account?  <%= link_to "SignUp", new_user_path %> </p>
+    </div>
+	
+	
+	
+
+
+<% end %>
+
+</div>
+
+

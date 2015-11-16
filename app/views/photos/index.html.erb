@@ -1,0 +1,23 @@
+<% if current_user %>
+
+	<h1> Photos of <%= current_user.first_name %> </h1>
+
+	<p><%= link_to "Logout" , '/logout', method: :delete%> </p>
+
+	<% @photos.each do |p| %>
+	<img src = <%= p.image %>> 
+
+	<% end %>
+
+<% else %>
+	<div class = "test">
+    <%= render 'users/new' %>
+	</div>
+
+	<p> Have An Account? <a> Sign in </a> </p>
+
+<% end %>
+
+<script>
+
+</script>
